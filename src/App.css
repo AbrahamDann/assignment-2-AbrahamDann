@@ -1,1 +1,224 @@
 /* Paste your Assignment 1 styles.css here. Keep the icons in src/assets/ so url(assets/...) paths keep working. */
+/* This is your CSS files */
+body{
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: black
+}
+.header{
+    background-color: #dc4c3e;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding:5px;
+}
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header-right {
+    margin-left: auto;
+}
+.header input {
+    font: inherit;
+}
+.header img{
+    width:2rem;
+    height:2rem;
+    object-fit: contain;
+}
+.page-layout{
+    display:flex;
+}
+.sidebar{
+    background: #fefbf2;
+    flex: 0 0 300px;
+}
+.sidebar ul {
+    list-style: none;
+}
+.task-count {
+    color: #7e7d79;
+    font-size: 12px;
+}
+h1{
+    font-size:20px;
+    padding: 0px 40px;
+}
+.task-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.task-list li{
+    padding: 6px 0;
+    list-style: none;
+}
+.task-list label{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.task-list input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #bdbdbd;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    flex: 0 0 20px;
+}
+.task-list li {
+    border-bottom: 1px solid #eeeeee;
+    padding: 12px 0;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* React additions */
+.header input {
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 8px 10px;
+}
+.header input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+.task-counter {
+    font-weight: 700;
+}
+.sidebar li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 4px;
+}
+.sidebar li:hover {
+    background: #ffffff;
+}
+.sidebar img {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+}
+.main-content {
+    flex: 1;
+    padding: 0 40px 24px;
+}
+.main-content h1 {
+    padding: 0;
+}
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.filter-sep {
+    color: #bdbdbd;
+}
+.filter-btn {
+    background: none;
+    border: none;
+    padding: 4px 6px;
+    font: inherit;
+    color: #555555;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.filter-btn:hover {
+    background: #f3f3f3;
+}
+.filter-btn:active {
+    background: #eaeaea;
+}
+.filter-btn.active {
+    color: #dc4c3e;
+    font-weight: 700;
+}
+.task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.task-list label {
+    flex: 1;
+    cursor: pointer;
+}
+.task-list input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+    background: #ffffff;
+    cursor: pointer;
+}
+.task-list input[type="checkbox"]:hover {
+    border-color: #dc4c3e;
+}
+.task-list input[type="checkbox"]:checked {
+    background: #dc4c3e;
+    border-color: #dc4c3e;
+}
+.delete-btn {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font: inherit;
+    color: #555555;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    border-color: #dc4c3e;
+    color: #dc4c3e;
+}
+.delete-btn:active {
+    background: #fdecea;
+}
+.empty-state {
+    color: #7e7d79;
+    padding: 12px 0;
+}
+.task-form {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+.task-form input[type="text"] {
+    flex: 1;
+    font: inherit;
+    padding: 8px 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+.task-form button {
+    background: #dc4c3e;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 14px;
+    font: inherit;
+    cursor: pointer;
+}
+.task-form button:hover {
+    background: #c23d30;
+}
+.task-form button:active {
+    background: #a83226;
+}
+@media (max-width: 480px) {
+    .main-content {
+        padding: 0 16px 24px;
+    }
+    .sidebar {
+        display: none;
+    }
+}
